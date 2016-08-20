@@ -27,11 +27,13 @@ GAXamarinImplementation.Init("XX-XXXXXXXX-X");
 
 #### Usage
 
-TrackUser(string userId)
+TrackUser(string userId): You only need to set User ID on a tracker once. By setting it on the tracker, the ID will be sent with all subsequent hits.
 
 ```
 CrossGAXamarin.Current.TrackUser("userId");
 ```
+
+TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f);
 
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
