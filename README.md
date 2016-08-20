@@ -39,13 +39,21 @@ CrossGAXamarin.Current.TrackUser("userId");
 
 @param ScreenName The name of an application screen.
             
-**Screens** in Google Analytics represent content users are viewing within your app. Measuring screen views allows you to see which content is being viewed most by your users, and how they are navigating between different pieces of content.
+**Screens** 
 
-**Custom dimension** values can be sent with any Google Analytics hit type, including screen views, events and user timings. The defined scope of the custom dimension will determine, at processing time, which hits are associated with the dimension value.
+In Google Analytics represent content users are viewing within your app. Measuring screen views allows you to see which content is being viewed most by your users, and how they are navigating between different pieces of content.
 
-**Custom metric** values are aggregated in reports just like other pre-defined metrics in Google Analytics.
+**Custom dimension** 
 
-**Scope** determines which hits will be associated with a particular custom dimension value. There are four levels of scope: product, hit, session, and user:
+Custom dimension values can be sent with any Google Analytics hit type, including screen views, events and user timings. The defined scope of the custom dimension will determine, at processing time, which hits are associated with the dimension value.
+
+**Custom metric** 
+
+Custom metric values are aggregated in reports just like other pre-defined metrics in Google Analytics.
+
+**Scope** 
+
+Determines which hits will be associated with a particular custom dimension value. There are four levels of scope: product, hit, session, and user:
 
 * Product – value is applied to the product for which it has been set (Enhanced Ecommerce only).
 * Hit – value is applied to the single hit for which it has been set.
