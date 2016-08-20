@@ -35,11 +35,20 @@ You only need to set User ID on a tracker once. By setting it on the tracker, th
 CrossGAXamarin.Current.TrackUser("userId");
 ```
 
-TrackScreen(string screenName,
-            int dimensionIndex = 0, string dimensionValue = null,
-            int metricIndex = 0, float metricValue = 0f)
+TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)
             
+Screens in Google Analytics represent content users are viewing within your app. Measuring screen views allows you to see which content is being viewed most by your users, and how they are navigating between different pieces of content.
 
+Custom dimension values can be sent with any Google Analytics hit type, including screen views, events and user timings. The defined scope of the custom dimension will determine, at processing time, which hits are associated with the dimension value.
+
+Custom metric values are aggregated in reports just like other pre-defined metrics in Google Analytics.
+
+Scope determines which hits will be associated with a particular custom dimension value. There are four levels of scope: product, hit, session, and user:
+
+Product – value is applied to the product for which it has been set (Enhanced Ecommerce only).
+Hit – value is applied to the single hit for which it has been set.
+Session – value is applied to all hits in a single session.
+User – value is applied to all hits in current and future sessions, until value changes or custom dimension is made inactive.
 
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
