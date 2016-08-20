@@ -11,7 +11,7 @@ Google Analytics Plugin for Xamarin and Windows
 |Platform|Supported|Version|Component|
 | ------------------- | :-----------: | :-----------: | :------------------: |
 |Xamarin.iOS Unified|Yes|iOS 8.1+|Google Analytics Component for iOS by Xamarin Inc.|
-|Xamarin.Android|Yes|API 15+|Analytics Google Play Service|
+|Xamarin.Android|Yes|API 15+|Google Play Service - Analytics|
 |Windows|Yes|10+|Google Analytics SDK 1.3|
 
 #### Usage
