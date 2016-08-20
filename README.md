@@ -99,7 +99,19 @@ https://developers.google.com/analytics/devguides/collection/
 
 **Android**
 
-https://developers.google.com/analytics/devguides/collection/
+https://developers.google.com/analytics/devguides/collection/android/v4/
+
+**iOS**
+
+https://developers.google.com/analytics/devguides/collection/ios/v3/
+
+**Create and edit Custom Dimensions and Metrics**
+
+https://support.google.com/analytics/answer/2709829?hl=en&ref_topic=2709827
+
+**Scope**
+
+https://support.google.com/analytics/answer/2709828#scope
 
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
