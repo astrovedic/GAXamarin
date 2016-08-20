@@ -63,6 +63,7 @@ CrossGAXamarin.Current.TrackScreen("Main Screen");
 Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
 
 |Field Name|Type|Required|Description|
+| ------------------- | :-----------: | :-----------: | :------------------: |
 |Category|String|Yes|The event category|
 |Action|String|Yes|The event action|
 |Label|String|No|The event label|
