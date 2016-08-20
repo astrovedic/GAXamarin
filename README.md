@@ -38,7 +38,7 @@ You only need to set User ID on a tracker once. By setting it on the tracker, th
 **TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
 
 ```
-CrossGAXamarin.Current.TrackScreen("Main Screen");
+CrossGAXamarin.Current.TrackScreen("Main Screen", 1, "Male"); // Gender is a pre-defined custom dimension
 ```
 
 @param ScreenName The name of an application screen.
