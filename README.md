@@ -45,10 +45,10 @@ CrossGAXamarin.Current.TrackUser("userId");
 
 **Scope** determines which hits will be associated with a particular custom dimension value. There are four levels of scope: product, hit, session, and user:
 
-Product – value is applied to the product for which it has been set (Enhanced Ecommerce only).
-Hit – value is applied to the single hit for which it has been set.
-Session – value is applied to all hits in a single session.
-User – value is applied to all hits in current and future sessions, until value changes or custom dimension is made inactive.
+* Product – value is applied to the product for which it has been set (Enhanced Ecommerce only).
+* Hit – value is applied to the single hit for which it has been set.
+* Session – value is applied to all hits in a single session.
+* User – value is applied to all hits in current and future sessions, until value changes or custom dimension is made inactive.
 
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
