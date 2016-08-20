@@ -61,7 +61,7 @@ Custom metric values are aggregated in reports just like other pre-defined metri
 
 **Scope** 
 
-Determines which hits will be associated with a particular custom dimension value. There are four levels of scope: product, hit, session, and user:
+Determines which hits will be associated with a particular custom dimension value. There are four levels of scope:
 
 * Product – value is applied to the product for which it has been set (Enhanced Ecommerce only).
 * Hit – value is applied to the single hit for which it has been set.
