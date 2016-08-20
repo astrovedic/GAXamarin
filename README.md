@@ -62,13 +62,6 @@ CrossGAXamarin.Current.TrackScreen("Main Screen");
 
 Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
 
-|Field Name|Type|Required|Description|
-| ------------------- | :-----------: | :-----------: | :------------------: |
-|Category|String|Yes|The event category|
-|Action|String|Yes|The event action|
-|Label|String|No|The event label|
-|Value|Long|No|The event value|
-
 ```
 CrossGAXamarin.Current.TrackEvent("Screen Lifecycle", "OnAppearing");
 ```
@@ -78,11 +71,15 @@ CrossGAXamarin.Current.TrackEvent("Screen Lifecycle", "OnAppearing");
 @params TimingCategory, TimingName completely upon requirements.
 @param TimingInterval the time it takes to load a resource.
 
+Measuring user timings provides a native way to measure a period of time in Google Analytics. This can be useful to measure resource load times.
+
+User timing data can be found primarily in the App Speed User Timings report.
+
 ```
 CrossGAXamarin.Current.TrackTime("Mapping", "GetTimeTypes", 200);
 ```
 
-
+Crash and exception measurement allows you to measure the number and type of caught and uncaught crashes and exceptions that occur in your app.
 
 ```
 CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
