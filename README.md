@@ -27,9 +27,10 @@ GAXamarinImplementation.Init("XX-XXXXXXXX-X");
 
 #### Usage
 
-**TrackUser**
+TrackUser(string userId)
 
 ```
+CrossGAXamarin.Current.TrackUser("userId");
 ```
 
 #### Contributors
