@@ -119,6 +119,10 @@ https://support.google.com/analytics/answer/2709829?hl=en&ref_topic=2709827
 
 https://support.google.com/analytics/answer/2709828#scope
 
+**Google Analytics SDK for Windows**
+
+https://googleanalyticssdk.codeplex.com/
+
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
 
