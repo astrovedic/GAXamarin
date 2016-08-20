@@ -93,6 +93,14 @@ Crash and exception measurement allows you to measure the number and type of cau
 CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
 ```
 
+##### Documentation
+
+https://developers.google.com/analytics/devguides/collection/
+
+**Android**
+
+https://developers.google.com/analytics/devguides/collection/
+
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
 
