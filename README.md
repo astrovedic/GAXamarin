@@ -6,9 +6,18 @@ Google Analytics Plugin for Xamarin and Windows
 * Available on NuGet: https://www.nuget.org/packages/Plugin.GAXamarin/ [![NuGet](https://img.shields.io/nuget/v/Plugin.GAXamarin.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.GAXamarin/)
 * Install in your PCL project and Client projects.
 
+```
+//Android
+GAXamarinImplementation.Init(this, "XX-XXXXXXXX-X");
 
+//iOS
+GAXamarinImplementation.Init("XX-XXXXXXXX-X");
 
-**Platform Requirements**
+//Windows
+GAXamarinImplementation.Init("XX-XXXXXXXX-X");
+```
+
+**Requirements**
 
 |Platform|Supported|Version|Component|
 | ------------------- | :-----------: | :-----------: | :------------------: |
