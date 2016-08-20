@@ -29,13 +29,17 @@ GAXamarinImplementation.Init("XX-XXXXXXXX-X");
 
 **TrackUser(string userId)**
 
-You only need to set User ID on a tracker once. By setting it on the tracker, the ID will be sent with all subsequent hits.
-
 ```
 CrossGAXamarin.Current.TrackUser("userId");
 ```
 
+You only need to set User ID on a tracker once. By setting it on the tracker, the ID will be sent with all subsequent hits.
+
 **TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
+
+```
+CrossGAXamarin.Current.TrackScreen("Main Screen");
+```
 
 @param ScreenName The name of an application screen.
             
@@ -60,21 +64,21 @@ Determines which hits will be associated with a particular custom dimension valu
 * Session – value is applied to all hits in a single session.
 * User – value is applied to all hits in current and future sessions, until value changes or custom dimension is made inactive.
 
-```
-CrossGAXamarin.Current.TrackScreen("Main Screen");
-```
-
 **TrackEvent(string eventCategory, string eventAction, string eventLabel = "AppEvent", int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
-
-@param EventCategory completely upon requirements.
-
-Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
 
 ```
 CrossGAXamarin.Current.TrackEvent("Screen Lifecycle", "OnAppearing");
 ```
 
+@param EventCategory completely upon requirements.
+
+Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
+
 **TrackTime(string timingCategory, string timingName, long timingInterval, string timingLabel = "AppSpeed", int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
+
+```
+CrossGAXamarin.Current.TrackTime("Mapping", "GetTimeTypes", 200);
+```
 
 @params TimingCategory, TimingName completely upon requirements.
 @param TimingInterval the time it takes to load a resource.
@@ -83,15 +87,13 @@ Measuring user timings provides a native way to measure a period of time in Goog
 
 User timing data can be found primarily in the App Speed User Timings report.
 
-```
-CrossGAXamarin.Current.TrackTime("Mapping", "GetTimeTypes", 200);
-```
-
-Crash and exception measurement allows you to measure the number and type of caught and uncaught crashes and exceptions that occur in your app.
+**TrackException(string exceptionMessage, bool isFatal)**
 
 ```
 CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
 ```
+
+Crash and exception measurement allows you to measure the number and type of caught and uncaught crashes and exceptions that occur in your app.
 
 ##### Documentation
 
