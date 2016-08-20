@@ -74,7 +74,7 @@ Determines which hits will be associated with a particular custom dimension valu
 CrossGAXamarin.Current.TrackEvent("Screen Lifecycle", "OnAppearing");
 ```
 
-@param EventCategory completely upon requirements.
+@params EventCategory, EventAction completely upon requirements.
 
 Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
 
@@ -98,6 +98,8 @@ CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
 ```
 
 Crash and exception measurement allows you to measure the number and type of caught and uncaught crashes and exceptions that occur in your app.
+
+Uncaught exceptions represent instances where your app encountered unexpected conditions at runtime and are often fatal, causing the app to crash. Uncaught exceptions are sent to Google Analytics automatically by setting the TrackUncaughtExceptions configuration value to true.
 
 ##### Documentation
 
