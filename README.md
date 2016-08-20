@@ -42,8 +42,6 @@ CrossGAXamarin.Current.TrackScreen("Main Screen", 1, "Male"); // Gender is a pre
 ```
 
 @param ScreenName The name of an application screen.
-
-* If you store the gender of signed-in users in a CRM system, you could combine this information with your Analytics data to see Pageviews by gender.
             
 **Screens** 
 
@@ -52,6 +50,8 @@ In Google Analytics represent content users are viewing within your app. Measuri
 **Custom dimension** 
 
 Custom dimension values can be sent with any Google Analytics hit type, including screen views, events and user timings. The defined scope of the custom dimension will determine, at processing time, which hits are associated with the dimension value.
+
+* If you store the gender of signed-in users in a CRM system, you could combine this information with your Analytics data to see Pageviews by gender.
 
 **Custom metric** 
 
