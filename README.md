@@ -89,6 +89,7 @@ CrossGAXamarin.Current.TrackTime("Mapping", "GetTimeTypes", 200);
 ```
 
 @params TimingCategory, TimingName completely upon requirements.
+
 @param TimingInterval the time it takes to load a resource.
 
 Measuring user timings provides a native way to measure a period of time in Google Analytics. This can be useful to measure resource load times.
