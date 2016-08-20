@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="GADemo/GADemo.Droid/GADemo.Droid.csproj">
+  <MonoDevelop.Ide.ItemProperties.GADemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D6823497-D4AD-4479-9600-FB8732054029" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GADemo" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GADemo.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
+</Properties>

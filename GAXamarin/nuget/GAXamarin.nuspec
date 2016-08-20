@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Plugin.GAXamarin</id>
+        <version>1.0.0</version>
+        <title>Google Analytics Plugin for Xamarin and Windows</title>
+        <authors>Alex Rainman</authors>
+        <owners>Alex Rainman</owners>
+        <licenseUrl>https://github.com/alexrainman/GAXamarin/blob/master/README.md</licenseUrl>
+        <projectUrl>https://github.com/alexrainman/GAXamarin</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Standard API to track Users, Screens, Events, Timing and Exceptions from PCL.</description>
+        <summary>Google Analytics Plugin for Xamarin and Windows</summary>
+        <releaseNotes>https://github.com/alexrainman/GAXamarin/commits</releaseNotes>
+        <tags>google analytics ios android uwp wp81 winstore xamarin forms monotouch monodroid</tags>
+        <dependencies>
+		</dependencies>
+    </metadata>
+    <files>
+        <!-- PCL -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/PCL/Plugin.GAXamarin.dll" target="lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\Plugin.GAXamarin.dll" />
+
+        <!-- Xamarin.iOS (Unified)-->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\Xamarin.iOS10\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/iOS/Plugin.GAXamarin.dll" target="lib\Xamarin.iOS10\Plugin.GAXamarin.dll" />
+
+        <!-- Xamarin.Android -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\MonoAndroid\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/Android/Plugin.GAXamarin.dll" target="lib\MonoAndroid\Plugin.GAXamarin.dll" />
+
+        <!-- UWP -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\UAP10\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/UWP/Plugin.GAXamarin.dll" target="lib\UAP10\Plugin.GAXamarin.dll" />
+
+        <!-- WP8 -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\wp8\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/WP8/Plugin.GAXamarin.dll" target="lib\wp8\Plugin.GAXamarin.dll" />
+
+        <!-- UP81 -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\wpa81\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/WP81/Plugin.GAXamarin.dll" target="lib\wpa81\Plugin.GAXamarin.dll" />
+
+        <!-- WS -->
+        <file src="lib/Plugin.GAXamarin.Abstractions.dll" target="lib\win8\Plugin.GAXamarin.Abstractions.dll" />
+        <file src="lib/WS/Plugin.GAXamarin.dll" target="lib\win8\Plugin.GAXamarin.dll" />
+
+    </files>
+</package>

@@ -1,0 +1,15 @@
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\Plugin.GAXamarin.Android.csprojResolveAssemblyReference.cache
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin.pdb
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin.apk
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin-Signed.apk
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin.Abstractions.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Xamarin.GooglePlayServices.Analytics.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\bin\Debug\Plugin.GAXamarin.Abstractions.pdb
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\Plugin.GAXamarin.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\Plugin.GAXamarin.pdb
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\android\bin\Plugin.GAXamarin.apk
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\R.cs.flag
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Android\obj\Debug\uploadflags.txt

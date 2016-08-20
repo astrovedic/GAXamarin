@@ -1,0 +1,5 @@
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Abstractions\bin\Release\Plugin.GAXamarin.Abstractions.XML
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Abstractions\bin\Release\Plugin.GAXamarin.Abstractions.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Abstractions\bin\Release\Plugin.GAXamarin.Abstractions.pdb
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Abstractions\obj\Release\Plugin.GAXamarin.Abstractions.dll
+C:\Users\Alex Rainman\Desktop\GAXamarin\GAXamarin\Plugin.GAXamarin.Abstractions\obj\Release\Plugin.GAXamarin.Abstractions.pdb
