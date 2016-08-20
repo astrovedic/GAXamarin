@@ -36,6 +36,8 @@ CrossGAXamarin.Current.TrackUser("userId");
 ```
 
 **TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
+
+@param ScreenName The name of an application screen.
             
 **Screens** in Google Analytics represent content users are viewing within your app. Measuring screen views allows you to see which content is being viewed most by your users, and how they are navigating between different pieces of content.
 
@@ -49,6 +51,41 @@ CrossGAXamarin.Current.TrackUser("userId");
 * Hit – value is applied to the single hit for which it has been set.
 * Session – value is applied to all hits in a single session.
 * User – value is applied to all hits in current and future sessions, until value changes or custom dimension is made inactive.
+
+```
+CrossGAXamarin.Current.TrackScreen("Main Screen");
+```
+
+**TrackEvent(string eventCategory, string eventAction, string eventLabel = "AppEvent", int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
+
+@param EventCategory completely upon requirements.
+
+Events are a useful way to collect data about a user's interaction with interactive components of your app, like button presses or the use of a particular item in a game.
+
+|Field Name|Type|Required|Description|
+|Category|String|Yes|The event category|
+|Action|String|Yes|The event action|
+|Label|String|No|The event label|
+|Value|Long|No|The event value|
+
+```
+CrossGAXamarin.Current.TrackEvent("Screen Lifecycle", "OnAppearing");
+```
+
+**TrackTime(string timingCategory, string timingName, long timingInterval, string timingLabel = "AppSpeed", int dimensionIndex = 0, string dimensionValue = null, int metricIndex = 0, float metricValue = 0f)**
+
+@params TimingCategory, TimingName completely upon requirements.
+@param TimingInterval the time it takes to load a resource.
+
+```
+CrossGAXamarin.Current.TrackTime("Mapping", "GetTimeTypes", 200);
+```
+
+
+
+```
+CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
+```
 
 #### Contributors
 * [alexrainman](https://github.com/alexrainman)
