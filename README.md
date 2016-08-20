@@ -45,7 +45,7 @@ CrossGAXamarin.Current.TrackScreen("Main Screen", 1, "Male"); // Gender is a pre
 
 @params DimensionIndex, DimensionValue are optional (you have up to 20 slots for custom dimensions starting with index 1)
 
-@params MetricIndex, MetricValue are optional you have up to 20 slots for custom metrics starting with index 1)
+@params MetricIndex, MetricValue are optional (you have up to 20 slots for custom metrics starting with index 1)
             
 **Screens** 
 
