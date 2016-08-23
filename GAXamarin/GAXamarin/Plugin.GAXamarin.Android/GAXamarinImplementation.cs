@@ -13,13 +13,13 @@ namespace Plugin.GAXamarin
         public static GoogleAnalytics GAInstance;
         public static Tracker GATracker;
 
-        public static void Init(Context context, string trackingId, int localDispatchPeriod = 20)
+        public static void Init(Context context, string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
         {
             GAInstance = GoogleAnalytics.GetInstance(context);
             GAInstance.SetLocalDispatchPeriod(localDispatchPeriod);
 
             GATracker = GAInstance.NewTracker(trackingId);
-            GATracker.EnableExceptionReporting(true);
+			GATracker.EnableExceptionReporting(trackUncaughtExceptions);
         }
 
         public void TrackUser(string userId)

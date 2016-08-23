@@ -2,16 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Plugin.GAXamarin</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>Google Analytics Plugin for Xamarin and Windows</title>
         <authors>Alex Rainman</authors>
         <owners>Alex Rainman</owners>
         <licenseUrl>https://github.com/alexrainman/GAXamarin/blob/master/README.md</licenseUrl>
         <projectUrl>https://github.com/alexrainman/GAXamarin</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Standard API to track Users, Screens, Events, Timing and Exceptions from PCL.</description>
         <summary>Google Analytics Plugin for Xamarin and Windows</summary>
-        <releaseNotes>https://github.com/alexrainman/GAXamarin/commits</releaseNotes>
+        <description>Standard API to track Users, Screens, Events, Timing, Exceptions, Custom Dimensions and Metrics from PCL.</description>
+        <releaseNotes>
+        1.0.1
+        [enhancement] Adding an extra parameter to Init method to enable/disable reporting uncaught exceptions.
+        </releaseNotes>
         <tags>google analytics ios android uwp wp81 winstore xamarin forms monotouch monodroid</tags>
         <dependencies>
 		</dependencies>

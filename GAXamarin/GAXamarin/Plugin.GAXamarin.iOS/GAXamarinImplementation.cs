@@ -11,10 +11,10 @@ namespace Plugin.GAXamarin
   {
         public static ITracker Tracker;
 
-        public static void Init(string trackingId, int localDispatchPeriod = 20)
+        public static void Init(string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
         {
             Gai.SharedInstance.DispatchInterval = localDispatchPeriod;
-            Gai.SharedInstance.TrackUncaughtExceptions = true;
+			Gai.SharedInstance.TrackUncaughtExceptions = trackUncaughtExceptions;
 
             Tracker = Gai.SharedInstance.GetTracker(trackingId);
         }

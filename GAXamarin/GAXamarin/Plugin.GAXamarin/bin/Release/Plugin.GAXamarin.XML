@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.GAXamarin</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.GAXamarin.CrossGAXamarin">
+             <summary>
+             Cross platform GAXamarin implemenations
+             </summary>
+            </member>
+        <member name="P:Plugin.GAXamarin.CrossGAXamarin.Current">
+             <summary>
+             Current settings to use
+             </summary>
+            </member>
+    </members>
+</doc>

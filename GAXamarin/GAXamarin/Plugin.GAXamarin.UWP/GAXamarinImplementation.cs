@@ -9,14 +9,14 @@ namespace Plugin.GAXamarin
   /// </summary>
   public class GAXamarinImplementation : IGAXamarin
   {
-        public static void Init(string trackingId, int localDispatchPeriod = 20)
+        public static void Init(string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
         {
 
             var config = new GoogleAnalytics.EasyTrackerConfig();
 
             config.TrackingId = trackingId;
             config.DispatchPeriod = new TimeSpan(localDispatchPeriod * 1000);
-            config.ReportUncaughtExceptions = true;
+            config.ReportUncaughtExceptions = trackUncaughtExceptions;
 
             GoogleAnalytics.EasyTracker.Current.Config = config;
         }
