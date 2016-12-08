@@ -104,14 +104,14 @@ CrossGAXamarin.Current.TrackException("Java.Net.SocketClosed", true);
 
 Crash and exception measurement allows you to measure the number and type of caught and uncaught crashes and exceptions that occur in your app.
 
-**TrackUnhandledExceptions()**
+**Unhandled Exceptions**
 
-Uncaught exceptions represent instances where your app encountered unexpected conditions at runtime and are often fatal, causing the app to crash. Uncaught exceptions are sent to Google Analytics automatically by setting the TrackUncaughtExceptions configuration value to true.
+Unhandled exceptions are reported as events and you can find them at Behavior/Events/Overview, under "Crashes" category.
 
-Find the reported hits at Behavior/Events/Overview, under "Crashes" Event Category.
+Event Action = ex.Message
+Event Label = ex.StackTrace
 
-- Event Action = ex.Message
-- Event Label = ex.StackTrace
+These exceptions represent instances where your app encountered unexpected conditions at runtime and are often fatal, causing the app to crash and are sent to Google Analytics automatically by setting the TrackUncaughtExceptions configuration value to true.
 
 ##### Documentation
 
