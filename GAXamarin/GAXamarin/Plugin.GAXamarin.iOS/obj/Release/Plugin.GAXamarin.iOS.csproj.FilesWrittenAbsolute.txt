@@ -1,0 +1,9 @@
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/obj/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/obj/Release/optimized/
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Plugin.GAXamarin.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/obj/Release/Plugin.GAXamarin.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Google.Analytics.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Plugin.GAXamarin.Abstractions.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Plugin.GAXamarin.Abstractions.dll.mdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Plugin.GAXamarin.Abstractions.pdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin.iOS/bin/iPhone/Release/Plugin.GAXamarin.Abstractions.xml

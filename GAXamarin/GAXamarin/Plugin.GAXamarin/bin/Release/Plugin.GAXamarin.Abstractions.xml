@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.GAXamarin.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.GAXamarin.Abstractions.IGAXamarin">
+             <summary>
+             Interface for GAXamarin
+             </summary>
+            </member>
+    </members>
+</doc>

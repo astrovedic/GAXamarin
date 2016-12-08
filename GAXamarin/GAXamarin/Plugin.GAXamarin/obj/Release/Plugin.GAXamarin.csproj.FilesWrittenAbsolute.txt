@@ -1,0 +1,9 @@
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/obj/Release/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.dll.mdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/obj/Release/Plugin.GAXamarin.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/obj/Release/Plugin.GAXamarin.dll.mdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.Abstractions.dll
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.Abstractions.dll.mdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.Abstractions.pdb
+/Users/alexrainman/Desktop/GAXamarin/GAXamarin/Plugin.GAXamarin/bin/Release/Plugin.GAXamarin.Abstractions.xml

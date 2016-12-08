@@ -1,6 +1,11 @@
 using Plugin.GAXamarin.Abstractions;
 using System;
-
+using System.Threading.Tasks;
+#if WINDOWS_PHONE
+using System.Windows;
+#else
+using Windows.UI.Xaml;
+#endif
 
 namespace Plugin.GAXamarin
 {
@@ -9,14 +14,36 @@ namespace Plugin.GAXamarin
   /// </summary>
   public class GAXamarinImplementation : IGAXamarin
   {
-        public static void Init(string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
+        public static void Init(string trackingId, int localDispatchPeriod = 0, bool trackUncaughtExceptions = true)
         {
-
             var config = new GoogleAnalytics.EasyTrackerConfig();
 
             config.TrackingId = trackingId;
             config.DispatchPeriod = new TimeSpan(localDispatchPeriod * 1000);
-            config.ReportUncaughtExceptions = trackUncaughtExceptions;
+            config.ReportUncaughtExceptions = false;
+
+			if (trackUncaughtExceptions)
+			{
+#if WINDOWS_PHONE
+                Application.Current.UnhandledException += (sender, e) =>
+				{
+                    var ex = e.ExceptionObject;
+                    TrackUnhandledException(ex);
+				};
+#else
+                Application.Current.UnhandledException += (sender, e) =>
+                {
+                    var ex = e.Exception;
+                    TrackUnhandledException(ex);
+                };
+#endif
+
+                TaskScheduler.UnobservedTaskException += (sender, e) =>
+				{
+					var ex = e.Exception;
+					TrackUnhandledException(ex);
+				};
+			}
 
             GoogleAnalytics.EasyTracker.Current.Config = config;
         }
@@ -68,5 +95,10 @@ namespace Plugin.GAXamarin
         {
             GoogleAnalytics.EasyTracker.GetTracker().SendException(exceptionMessage, isFatal);
         }
+
+		public static void TrackUnhandledException(Exception ex)
+		{
+			GoogleAnalytics.EasyTracker.GetTracker().SendEvent("Crashes", ex.Message, ex.ToString(), 0);
+		}
     }
 }

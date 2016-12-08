@@ -1,6 +1,9 @@
 using Plugin.GAXamarin.Abstractions;
 using System;
 using Google.Analytics;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Plugin.GAXamarin
 {
@@ -11,10 +14,25 @@ namespace Plugin.GAXamarin
   {
         public static ITracker Tracker;
 
-        public static void Init(string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
+        public static void Init(string trackingId, int localDispatchPeriod = 120, bool trackUncaughtExceptions = true)
         {
             Gai.SharedInstance.DispatchInterval = localDispatchPeriod;
-			Gai.SharedInstance.TrackUncaughtExceptions = trackUncaughtExceptions;
+			Gai.SharedInstance.TrackUncaughtExceptions = false;
+
+			if (trackUncaughtExceptions)
+			{
+				AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+				{
+					var ex = (Exception)e.ExceptionObject;
+					TrackUnhandledException(ex);
+				};
+
+				TaskScheduler.UnobservedTaskException += (sender, e) =>
+				{
+					var ex = e.Exception;
+					TrackUnhandledException(ex);
+				};
+			}
 
             Tracker = Gai.SharedInstance.GetTracker(trackingId);
         }
@@ -68,5 +86,11 @@ namespace Plugin.GAXamarin
         {
             Gai.SharedInstance.DefaultTracker.Send(DictionaryBuilder.CreateException(exceptionMessage, isFatal).Build());
         }
+
+		public static void TrackUnhandledException(Exception ex)
+		{
+			Gai.SharedInstance.DefaultTracker.Send(DictionaryBuilder.CreateEvent("Crashes", ex.Message, ex.ToString(), null).Build());
+			Gai.SharedInstance.Dispatch();
+		}
     }
 }

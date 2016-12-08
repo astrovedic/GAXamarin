@@ -2,93 +2,126 @@ using Plugin.GAXamarin.Abstractions;
 using System;
 using Android.Gms.Analytics;
 using Android.Content;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Linq;
+using Android.Runtime;
 
 namespace Plugin.GAXamarin
 {
-  /// <summary>
-  /// Implementation for Feature
-  /// </summary>
-  public class GAXamarinImplementation : IGAXamarin
-  {
-        public static GoogleAnalytics GAInstance;
-        public static Tracker GATracker;
+	/// <summary>
+	/// Implementation for Feature
+	/// </summary>
+	public class GAXamarinImplementation : IGAXamarin
+	{
+		public static GoogleAnalytics GAInstance;
+		public static Tracker GATracker;
 
-        public static void Init(Context context, string trackingId, int localDispatchPeriod = 20, bool trackUncaughtExceptions = true)
-        {
-            GAInstance = GoogleAnalytics.GetInstance(context);
-            GAInstance.SetLocalDispatchPeriod(localDispatchPeriod);
+		public static void Init(Context context, string trackingId, int localDispatchPeriod = 1800, bool trackUncaughtExceptions = true, bool enableAutoActivityTracking = false)
+		{
+			GAInstance = GoogleAnalytics.GetInstance(context);
+			GAInstance.SetLocalDispatchPeriod(localDispatchPeriod);
 
-            GATracker = GAInstance.NewTracker(trackingId);
-			GATracker.EnableExceptionReporting(trackUncaughtExceptions);
-        }
+			GATracker = GAInstance.NewTracker(trackingId);
 
-        public void TrackUser(string userId)
-        {
-            GATracker.Set("&uid", userId);
-        }
+			GATracker.EnableExceptionReporting(false);
 
-        public void TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null,
-                                int metricIndex = 0, float metricValue = 0f)
-        {
-            var builder = new HitBuilders.ScreenViewBuilder();
+			GATracker.EnableAutoActivityTracking(enableAutoActivityTracking);
 
-            if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
-                builder.SetCustomDimension(dimensionIndex, dimensionValue);
+			if (trackUncaughtExceptions)
+			{
+				AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+				{
+					var ex = (Exception)e.ExceptionObject;
+					TrackUnhandledException(ex);
+				};
 
-            if (metricIndex > 0)
-                builder.SetCustomMetric(metricIndex, metricValue);
+				TaskScheduler.UnobservedTaskException += (sender, e) =>
+				{
+					var ex = e.Exception;
+					TrackUnhandledException(ex);
+				};
+			}
+		}
 
-            GATracker.SetScreenName(screenName);
-            GATracker.Send(builder.Build());
-        }
+		public void TrackUser(string userId)
+		{
+			GATracker.Set("&uid", userId);
+		}
 
-        public void TrackEvent(string eventCategory, string eventAction, string eventLabel = "AppEvent",
-                               int dimensionIndex = 0, string dimensionValue = null,
-                               int metricIndex = 0, float metricValue = 0f)
-        {
-            var builder = new HitBuilders.EventBuilder();
+		public void TrackScreen(string screenName, int dimensionIndex = 0, string dimensionValue = null,
+								int metricIndex = 0, float metricValue = 0f)
+		{
+			var builder = new HitBuilders.ScreenViewBuilder();
 
-            if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
-                builder.SetCustomDimension(dimensionIndex, dimensionValue);
+			if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
+				builder.SetCustomDimension(dimensionIndex, dimensionValue);
 
-            if (metricIndex > 0)
-                builder.SetCustomMetric(metricIndex, metricValue);
+			if (metricIndex > 0)
+				builder.SetCustomMetric(metricIndex, metricValue);
 
-            builder.SetCategory(eventCategory);
-            builder.SetAction(eventAction);
-            builder.SetLabel(eventLabel);
+			GATracker.SetScreenName(screenName);
+			GATracker.Send(builder.Build());
+		}
 
-            GATracker.Send(builder.Build());
-        }
+		public void TrackEvent(string eventCategory, string eventAction, string eventLabel = "AppEvent",
+							   int dimensionIndex = 0, string dimensionValue = null,
+							   int metricIndex = 0, float metricValue = 0f)
+		{
+			var builder = new HitBuilders.EventBuilder();
 
-        public void TrackTime(string timingCategory, string timingName, long timingInterval, string timingLabel = "AppSpeed",
-                              int dimensionIndex = 0, string dimensionValue = null,
-                              int metricIndex = 0, float metricValue = 0f)
-        {
-            var builder = new HitBuilders.TimingBuilder();
+			if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
+				builder.SetCustomDimension(dimensionIndex, dimensionValue);
 
-            if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
-                builder.SetCustomDimension(dimensionIndex, dimensionValue);
+			if (metricIndex > 0)
+				builder.SetCustomMetric(metricIndex, metricValue);
 
-            if (metricIndex > 0)
-                builder.SetCustomMetric(metricIndex, metricValue);
+			builder.SetCategory(eventCategory);
+			builder.SetAction(eventAction);
+			builder.SetLabel(eventLabel);
 
-            builder.SetCategory(timingCategory);
-            builder.SetVariable(timingName);
-            builder.SetLabel(timingLabel);
+			GATracker.Send(builder.Build());
+		}
 
-            builder.SetValue(timingInterval);
+		public void TrackTime(string timingCategory, string timingName, long timingInterval, string timingLabel = "AppSpeed",
+							  int dimensionIndex = 0, string dimensionValue = null,
+							  int metricIndex = 0, float metricValue = 0f)
+		{
+			var builder = new HitBuilders.TimingBuilder();
 
-            GATracker.Send(builder.Build());
-        }
+			if (dimensionIndex > 0 && !string.IsNullOrEmpty(dimensionValue))
+				builder.SetCustomDimension(dimensionIndex, dimensionValue);
 
-        public void TrackException(string exceptionMessage, bool isFatal)
-        {
-            var builder = new HitBuilders.ExceptionBuilder();
-            builder.SetDescription(exceptionMessage);
-            builder.SetFatal(isFatal);
+			if (metricIndex > 0)
+				builder.SetCustomMetric(metricIndex, metricValue);
 
-            GATracker.Send(builder.Build());
-        }
-    }
+			builder.SetCategory(timingCategory);
+			builder.SetVariable(timingName);
+			builder.SetLabel(timingLabel);
+
+			builder.SetValue(timingInterval);
+
+			GATracker.Send(builder.Build());
+		}
+
+		public void TrackException(string exceptionMessage, bool isFatal)
+		{
+			var builder = new HitBuilders.ExceptionBuilder();
+			builder.SetDescription(exceptionMessage);
+			builder.SetFatal(isFatal);
+
+			GATracker.Send(builder.Build());
+		}
+
+		public static void TrackUnhandledException(Exception ex)
+		{
+			var builder = new HitBuilders.EventBuilder();
+
+			builder.SetCategory("Crashes");
+			builder.SetAction(ex.Message);
+			builder.SetLabel(ex.ToString());
+
+			GATracker.Send(builder.Build());
+		}
+	}
 }
