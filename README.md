@@ -108,8 +108,8 @@ Crash and exception measurement allows you to measure the number and type of cau
 
 Unhandled exceptions are reported as events and you can find them at Behavior/Events/Overview, under "Crashes" category.
 
-Event Action = ex.Message
-Event Label = ex.StackTrace
+- Event Action = ex.Message
+- Event Label = ex.StackTrace
 
 These exceptions represent instances where your app encountered unexpected conditions at runtime and are often fatal, causing the app to crash and are sent to Google Analytics automatically by setting the TrackUncaughtExceptions configuration value to true.
 
